@@ -1,52 +1,23 @@
-//  import { StatusBar } from 'expo-status-bar';
-//  import { StyleSheet, Text, View } from 'react-native';
-
-//  export default function App() {
-//    return (
-//      <View style={styles.container}>
-//        <Text>j'aime pas les cons</Text>
-//        <StatusBar style="auto" />
-//      </View>
-//    );
-//  }
-
-//  const styles = StyleSheet.create({
-//    container: {
-//      flex: 1,
-//      backgroundColor: '#fff',
-//      alignItems: 'center',
-//      justifyContent: 'center',
-//    },
-//  });
+// App.js
 import React from 'react';
-import {View, Image, StyleSheet} from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import Clock from './Clock';
 
-const styles = StyleSheet.create({
-  container: {
-    paddingTop: 50,
-  },
-  stretch: {
-    width: 400,
-    height: 400,
-    resizeMode: 'stretch',
-  },
-});
-
-const DisplayAnImageWithStyle = () => {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Image
-        style={styles.stretch}
-        source={require('./images/images.jpeg')}
-      />
-
-<Image
-        style={styles.stretch}
-        source={require('./images/image2.jpg')}
-      />
-
+    <View style={styles.appContainer}>
+      <Clock />
     </View>
   );
 };
 
-export default DisplayAnImageWithStyle;
+const styles = StyleSheet.create({
+  appContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'yellow', // Fond jaune
+  },
+});
+
+export default App;
