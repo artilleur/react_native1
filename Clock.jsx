@@ -16,14 +16,16 @@ const Clock = () => {
 
   return (
     <ImageBackground
-      source={require('./images/Sans titre111111111111.jpeg')} 
+      source={require('./images/image2.jpg')}
       style={styles.container}
+      resizeMode="contain" // Vous pouvez ajuster la valeur ici (cover, contain, stretch, etc.)
     >
       <View style={styles.overlay}>
         <Text style={styles.clockText}>{currentTime}</Text>
       </View>
     </ImageBackground>
   );
+  
 };
 
 const styles = StyleSheet.create({
@@ -34,12 +36,12 @@ const styles = StyleSheet.create({
     size:'100%'
   },
   overlay: {
-    backgroundColor: 'rgba(255, 255, 255, 0.2)', 
+    backgroundColor: 'rgba(255, 255, 255, 0.0)', 
     padding: 50,
     borderRadius: 10,
   },
   clockText: {
-    fontSize: 350,
+    fontSize: 200,
     fontWeight: 'bold',
     color: 'red',
   },
