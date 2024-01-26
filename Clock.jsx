@@ -16,7 +16,7 @@ const Clock = () => {
 
   return (
     <ImageBackground
-      source={require('./images/Sans titre111111111111.jpeg')} // Remplacez le chemin par celui de votre image
+      source={require('./images/Sans titre111111111111.jpeg')} 
       style={styles.container}
     >
       <View style={styles.overlay}>
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     size:'100%'
   },
   overlay: {
-    backgroundColor: 'rgba(255, 255, 255, 0.2)', // Vous pouvez ajuster l'opacité selon vos préférences
+    backgroundColor: 'rgba(255, 255, 255, 0.2)', 
     padding: 50,
     borderRadius: 10,
   },
