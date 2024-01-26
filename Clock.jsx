@@ -1,6 +1,6 @@
 // Clock.js
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ImageBackground } from 'react-native';
 import moment from 'moment';
 
 const Clock = () => {
@@ -15,9 +15,14 @@ const Clock = () => {
   }, []);
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.clockText}>{currentTime}</Text>
-    </View>
+    <ImageBackground
+      source={require('./images/Sans titre111111111111.jpeg')} // Remplacez le chemin par celui de votre image
+      style={styles.container}
+    >
+      <View style={styles.overlay}>
+        <Text style={styles.clockText}>{currentTime}</Text>
+      </View>
+    </ImageBackground>
   );
 };
 
@@ -26,12 +31,17 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'yellow', // Fond jaune
+    size:'100%'
+  },
+  overlay: {
+    backgroundColor: 'rgba(255, 255, 255, 0.2)', // Vous pouvez ajuster l'opacité selon vos préférences
+    padding: 50,
+    borderRadius: 10,
   },
   clockText: {
-    fontSize: 50,
+    fontSize: 350,
     fontWeight: 'bold',
-    color: 'red', // Texte en rouge
+    color: 'red',
   },
 });
 
